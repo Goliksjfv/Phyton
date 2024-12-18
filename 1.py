@@ -1,6 +1,6 @@
 n=10
 A=[0]*n
-print('Введите элемент массива')
+print('vvedite elemnt massiva')
 for i in range(n):
     print('A[',i,']=',sep='',end='')
     A[i]=int(input())
@@ -19,4 +19,11 @@ print(max)
 
 
 
+FROM python:3.9-slim
+
+WORKDIR /usr/src/app
+
+COPY app.py .
+
+CMD ["python", "app.py"]
 
